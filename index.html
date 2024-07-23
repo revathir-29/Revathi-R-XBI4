@@ -1,29 +1,32 @@
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle Area Calculator</title>
+</head>
+<body>
+    <h1>Rectangle Area Calculator</h1>
+    <input type="text" id="width" placeholder="Width"><br><br>
+    <input type="text" id="height" placeholder="Height"><br><br>
+    <button onclick="calculate()">Calculate</button>
 
-    </head>
-    <body>
-        <h1>Area of Rectangle</h1>
-        <input type="number" id="width" placeholder="Enter the width" ><br>
-        <input type="number" id="height" placeholder="Enter the Height"><br>
-        <button onclick="calculate()">Calculate</button>
-        <div class="result">
+    <div class="result">
         <p id="area"></p>
     </div>
 
-
-        
     <script>
-        function FindArea(width, height){
-            return width*height;
+        function findArea(width, height) {
+            return width * height;
         }
-        function calculate(){
-            var width=document.getElementById('width');
-            var height=document.getElementById('height');
-            var area=FindArea(width, height);
-            document.getElementById('area').textContent="Area of Rectangle : "+area;
+
+        function calculate() {
+            var width = document.getElementById('width').value;
+            var height = document.getElementById('height').value;
+            var area = findArea(width, height);
+
+            document.getElementById('area').textContent = "Area of rectangle: " + area;
         }
-     
     </script>
-     </body>
+</body>
 </html>
