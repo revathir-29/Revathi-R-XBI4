@@ -1,0 +1,29 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Area of Rectangle</h1>
+        <input type="number" id="width" placeholder="Enter the width" ><br>
+        <input type="number" id="height" placeholder="Enter the Height"><br>
+        <button onclick="calculate()">Calculate</button>
+        <div class="result">
+        <p id="area"></p>
+    </div>
+
+
+        
+    <script>
+        function FindArea(width, height){
+            return width*height;
+        }
+        function calculate(){
+            var width=document.getElementById('width');
+            var height=document.getElementById('height');
+            var area=FindArea(width, height);
+            document.getElementById('area').textContent="Area of Rectangle : "+area;
+        }
+     
+    </script>
+     </body>
+</html>
